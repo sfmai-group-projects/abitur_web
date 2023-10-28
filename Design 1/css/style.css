@@ -110,7 +110,7 @@ h1, h2, h3, a {
 }
 
 .submenu__link:hover {
-    color :var(--button-color);
+    opacity: 0.5;
 }
 
 .nav__menu {
@@ -126,7 +126,7 @@ h1, h2, h3, a {
 }
 
 .phone>a:hover {
-  color: var(--button-color);
+  opacity: 0.5;
 }
 
 .sf {
@@ -169,7 +169,7 @@ padding-bottom: 300px;
     width: 100%;
     background-color: var(--font-color);
     border: 2px solid var(--button-color);
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
     cursor: pointer;
   }
 
@@ -415,17 +415,16 @@ margin-bottom: 20px;
 
   .open-day__button {
     font-family: 'Roboto Regular';
-    background-color: var(--button-color);
+    background-color: transparent;
     color: var(--font-color);
     padding: 25px 100px;
-    transition: 0.5s ease-in-out;
+    border: 1px solid var(--font-color);
+    transition: 0.3s ease-in-out;
     cursor: pointer;
   }
 
   .open-day__button:hover {
-    background-color: transparent;
-    color: var(--button-color);
-    border: 1px solid var(--button-color);
+    opacity: 0.5;
   }
 
   .active-life__section {
@@ -509,18 +508,14 @@ margin-bottom: 20px;
     align-items: center;
     gap: 75px;
     opacity: 0;
-    transition: all 1s;
+    transition: all 0.7s;
     .admission-stage__text {
       margin: 10px 0;
     }
   }
 
-  .left {
+  .floating-left {
     transform: translateX(-100%);
-  }
-
-  .right {
-    transform: translateX(100%);
   }
 
   .admission-stage:nth-child(2n) {
@@ -685,18 +680,25 @@ margin-bottom: 20px;
     border-radius: 20px;
     border: 3px solid var(--button-color);
     border-top: 5px solid var(--button-color);
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
     cursor: pointer;
+  }
+
+  .check {
+    transition: 0.3s ease-in-out;
   }
 
   .check>path {
     stroke: var(--font-color);
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
   }
 
   .questions-answers__row>article:hover {
     .questions-answers__text {
       color: var(--button-color);
+    }
+    .check {
+      transform: rotate(180deg);
     }
     .check>path {
       stroke: var(--button-color);
@@ -706,9 +708,9 @@ margin-bottom: 20px;
   .questions-answers__text {
     font-family: 'Roboto Regular';
     font-size: 1.5rem;
-    max-width: 445px;
+    max-width: 1000px;
     width: 100%;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
   }
 
   #afirst, #asecond, #athird, #afourth, #afifth, #asixth {
@@ -754,7 +756,7 @@ margin-bottom: 20px;
   }
 
   .footer__links:hover {
-    color:var(--button-color)
+   opacity: 0.5;
   }
 
   @media (max-width: 999.98px) {
@@ -792,10 +794,6 @@ margin-bottom: 20px;
       border-radius: 0 ;
       box-shadow: 0 0 100px var(--button-color);
     }
-
-    .active-life__section {
-      margin-top: 150px;
-  }
 
   .first-table-text>td {
     font-size: 2rem;
@@ -1110,6 +1108,10 @@ margin-bottom: 20px;
 
 .active-life__section {
   margin-bottom: 70px;
+}
+
+.admission-stages__section {
+  padding-bottom: 50px;
 }
 
 .admission-stages__title {
